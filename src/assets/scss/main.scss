@@ -2,7 +2,10 @@
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
+// Import element variables
+@import "./element-variables.scss";
+
 body {
   font-family: Inter, sans-serif;
-
+  background-color: $--white;
 }

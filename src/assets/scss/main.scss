@@ -23,6 +23,16 @@ body {
     font-size: 1.4em;
   }
 
+  p {
+    font-size: 1.1em;
+    color: $--dark-gray;
+  }
+
+  // Id's
+  #contact-cta {
+    background-color: $--light-gray;
+  }
+
   // Classess
   .feature-icon {
     font-size: 1.4em;

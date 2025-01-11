@@ -8,4 +8,26 @@
 body {
   font-family: Inter, sans-serif;
   background-color: $--white;
+  
+  h1 {
+    font-size: 3em;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 2.4em;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  // Classess
+  .feature-icon {
+    font-size: 1.4em;
+    background-color: $--moderate-blue;
+    padding: 10px 16px;
+    border-radius: 50%;
+  }
 }

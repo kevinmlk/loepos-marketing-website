@@ -49,6 +49,29 @@ body {
     }
   }
 
+  .btn {
+    font-family: $--font-family;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+
+  .btn-primary {
+    background-color: $--strong-blue;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: $--moderate-blue;
+  }
+
+  .badge.text-bg-primary {
+    background-color: $--strong-blue !important;
+    font-size: 1em;
+    font-weight: 500;
+  }
+
   .feature-icon {
     font-size: 1.4em;
     background-color: $--moderate-blue;

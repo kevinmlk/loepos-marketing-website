@@ -23,9 +23,35 @@ body {
     font-size: 1.4em;
   }
 
+  h6 {
+    font-size: .9em;
+    font-weight: 600;
+    color: $--dark-blue;
+  }
+
   p {
     font-size: 1.1em;
     color: $--dark-gray;
+  }
+
+  footer {
+    ul {
+      margin-top: 16px;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          font-size: 1.1em;
+          color: $--dark-gray;
+          font-weight: 500;
+        }
+      }
+    }
   }
 
   // Id's
@@ -44,6 +70,12 @@ body {
 
   // Classess
   .navbar {
+    img {
+      width: 100px;
+    }
+  }
+
+  .footer-brand {
     img {
       width: 100px;
     }
@@ -70,6 +102,11 @@ body {
     background-color: $--strong-blue !important;
     font-size: 1em;
     font-weight: 500;
+    width: fit-content;
+  }
+
+  .badge.text-bg-secondary {
+    background-color: $--moderate-blue !important;
   }
 
   .feature-icon {
@@ -77,5 +114,11 @@ body {
     background-color: $--moderate-blue;
     padding: 10px 16px;
     border-radius: 50%;
+  }
+
+  .third-feature-stat {
+    font-size: 2.8em;
+    font-weight: 600;
+    color: $--moderate-blue;
   }
 }

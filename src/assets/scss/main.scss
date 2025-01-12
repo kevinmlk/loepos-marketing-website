@@ -33,7 +33,17 @@ body {
     background-color: $--light-gray;
   }
 
+  #partner-logos {
+    background-color: $--white;
+  }
+
   // Classess
+  .navbar {
+    img {
+      width: 100px;
+    }
+  }
+
   .feature-icon {
     font-size: 1.4em;
     background-color: $--moderate-blue;

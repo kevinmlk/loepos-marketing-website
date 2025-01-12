@@ -10,9 +10,11 @@
   <!-- Header -->
   <header class="mb-5">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary py-3">
+    <nav class="navbar navbar-expand-lg py-3 border-bottom">
       <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">
+          <img src="./assets/media/logo-loepos-1.png" alt="Loepos logo">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,10 +27,10 @@
               <a class="nav-link" href="#">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#">Resources</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="#">Pricing</a>
             </li>
           </ul>
         </div>
@@ -39,7 +41,7 @@
   <!-- Main content -->
   <main class="my-5">
     <!-- Landing section -->
-    <section class="container d-flex flex-column align-items-center justify-content-center gap-3 text-center my-5 border-bottom">
+    <section class="container d-flex flex-column align-items-center justify-content-center gap-3 text-center my-5 py-5">
       <div class="d-flex flex-column align-items-center gap-3">
         <button type="button" class="btn btn-primary">
           New feature <span class="badge text-bg-secondary">Check out the team dashboard<i class="bi bi-arrow-right ms-2"></i></span>
@@ -48,33 +50,32 @@
         <p>Haal meer uit uw sociale dienstverlening met een platform dat taken automatiseert, processen vereenvoudigt en cliënten beter ondersteunt.</p>
       </div>
 
-      <div>
+      <div class="d-flex gap-3 mb-4">
         <button type="button" class="btn btn-primary"><i class="bi bi-play-circle me-2"></i>Demo</button>
         <button type="button" class="btn btn-light">Sign up</button>
       </div>
 
-      <div>
-        <img src="/media/macbook-mockup.png" alt="loepos" class="img-fluid">
+      <div class="d-flex flex-column gap-5">
+        <img src="./assets/media/macbook-mockup.png" alt="loepos" class="img-fluid position-relative">
 
-        <div>
+        <div class="position-absolute top-100 start-50 translate-middle p-5 border-top border-bottom" id="partner-logos">
           <p>Join 4,000+ companies already growing</p>
-          <div class="d-flex justify-content-between">
-            <img src="/media/partner-logo-1.png" alt="partner logo 1">
-            <img src="/media/partner-logo-2.png" alt="partner logo 2">
-            <img src="/media/partner-logo-3.png" alt="partner logo 3">
-            <img src="/media/partner-logo-4.png" alt="partner logo 4">
-            <img src="/media/partner-logo-5.png" alt="partner logo 5">
+          <div class="d-flex justify-content-between align-items-center gap-5 p-5">
+            <img src="./assets/media/partner-logo-1.png" alt="partner logo 1">
+            <img src="./assets/media/partner-logo-2.png" alt="partner logo 2">
+            <img src="./assets/media/partner-logo-3.png" alt="partner logo 3">
+            <img src="./assets/media/partner-logo-4.png" alt="partner logo 4">
+            <img src="./assets/media/partner-logo-5.png" alt="partner logo 5">
           </div>
         </div>
       </div>
-
     </section>
 
     <!-- First Features section -->
-    <section class="container d-flex flex-column align-items-center justify-content-center gap-3 my-5">
-      <span class="badge text-bg-secondary">Check out the team dashboard</span>
+    <section class="container d-flex flex-column align-items-center justify-content-center gap-3 my-5 pb-4">
+      <span class="badge text-bg-secondary">Features</span>
       <h2>Waarom kiezen voor Loepos?</h2>
-
+      
       <div class="d-flex justify-content-between align-items-center text-center gap-5">
         <div class="d-flex flex-column align-items-center gap-3">
           <i class="bi bi-filetype-ai feature-icon"></i>
@@ -193,7 +194,7 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container text-center">
       <span class="badge text-bg-secondary">Features</span>
       <h2>Cutting-edge features for advanced analytics</h2>
       <p>Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups.</p>
@@ -225,6 +226,7 @@
             <p>Krijg toegang tot duidelijke rapporten en statistieken die u helpen uw resultaten te optimaliseren.</p>
           </div>
         </div>
+
         <img src="" alt="">
       </div>
     </section>
@@ -233,9 +235,12 @@
     <section class="container-fluid d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5" id="newsletter-section">
       <h2>Start vandaag met Loepos</h2>
       <p>Werk efficiënter en bied de beste ondersteuning aan uw cliënten.</p>
-      <form>
-        <input type="email" placeholder="Voer uw emailadres in" required>
-        <button type="submit">Start nu</button>
+      <form class="d-flex">
+        <div>
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <button type="submit" class="btn btn-primary">Start nu</button>
       </form>
     </section>
   </main>

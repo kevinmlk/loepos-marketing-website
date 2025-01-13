@@ -1,25 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Marketing Website</title>
-    <link rel="stylesheet" href="./main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tab title -->
+  <title>Loepos: De AI-gebaseerde revolutie in schuldbemiddeling</title>
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-5">
-        <h1>Welcome to My Marketing Website</h1>
-        <p>Your one-stop solution for [your service/product]</p>
-    </header>
-    <main class="container my-5">
-        <section>
-            <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </section>
-    </main>
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 My Company</p>
-    </footer>
-    <script type="module" src="./assets/js/main.js"></script>
+  <!-- Header -->
+  <header class="mb-5">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg py-3 border-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/media/logo-loepos-1.png" alt="Loepos logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Navigation buttons -->
+        <div>
+          <button class="btn btn-light me-2" type="button">Contact</button>
+          <button class="btn btn-sm btn-primary" type="button">Inschrijven</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main class="my-5">
+    <!-- Landing section -->
+    <section class="container d-flex flex-column align-items-center justify-content-center gap-4 text-center my-5 py-5">
+      <div class="d-flex flex-column align-items-center gap-3">
+        <span class="badge text-bg-primary"><span class="badge text-bg-light">Belangrijk!</span> Schrijf je nu in voor onze nieuwsbrief<i class="bi bi-arrow-right ms-2"></i></span>
+        <h1>De AI-gebaseerde revolutie in schuldbemiddeling</h1>
+        <p>Haal meer uit uw sociale dienstverlening met een platform dat taken automatiseert, processen vereenvoudigt en cliënten beter ondersteunt.</p>
+      </div>
+
+      <div class="d-flex gap-3 mb-4">
+        <button type="button" class="btn btn-primary"><i class="bi bi-play-circle me-2"></i>Bekijk demo</button>
+        <button type="button" class="btn btn-light">Inschrijven</button>
+      </div>
+
+      <div class="d-flex flex-column gap-5">
+        <img src="./assets/media/macbook-mockup.png" alt="loepos" class="img-fluid position-relative">
+
+        <div class="position-absolute top-100 start-50 translate-middle p-5 mt-4 border-top border-bottom" id="partner-logos">
+          <p>Sluit uw organisatie bij ons aan als partner!</p>
+          <div class="d-flex justify-content-between align-items-center gap-5 mt-5 px-5 pb-4 pt-4">
+            <img src="./assets/media/partner-logo-1.png" alt="partner logo 1">
+            <img src="./assets/media/partner-logo-2.png" alt="partner logo 2">
+            <img src="./assets/media/partner-logo-3.png" alt="partner logo 3">
+            <img src="./assets/media/partner-logo-4.png" alt="partner logo 4">
+            <img src="./assets/media/partner-logo-5.png" alt="partner logo 5">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- First Features section -->
+    <section class="container d-flex flex-column align-items-center justify-content-center gap-3 mb-5 py-5">
+      <span class="badge text-bg-primary">Features</span>
+      <h2>Waarom kiezen voor Loepos?</h2>
+      
+      <div class="d-flex justify-content-between align-items-center text-center gap-5">
+        <div class="d-flex flex-column align-items-center gap-3">
+          <i class="bi bi-filetype-ai feature-icon"></i>
+          <h3>Slimme AI-functionaliteit</h3>
+          <p>Automatiseer repetitieve taken en besteed meer tijd aan wat echt telt: cliënten helpen.</p>
+        </div>
+
+        <div class="d-flex flex-column align-items-center gap-3">
+          <i class="bi bi-folder-check feature-icon"></i>
+          <h3>Eenvoudige cliëntbeheer</h3>
+          <p>Houd dossiers up-to-date en navigeer moeiteloos door belangrijke informatie.</p>
+        </div>
+
+        <div class="d-flex flex-column align-items-center gap-3">
+          <i class="bi bi-file-bar-graph feature-icon"></i>
+          <h3>Inzichtelijke rapportages</h3>
+          <p>Krijg toegang tot duidelijke rapporten en statistieken die u helpen uw resultaten te optimaliseren.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial section -->
+    <section class="container-fluid d-flex flex-column align-items-center justify-content-center my-5 p-5 text-center" id="testimonial-section">
+      <img src="./assets/media/partner-logo-2.png" alt="" class="mb-3">
+      <span id="testimonial-text">Met Loepos kunnen we nu onze cliënten veel sneller en persoonlijker ondersteunen.<br> Dit systeem heeft onze manier van werken volledig veranderd.</span>
+      <img class="my-4" src="./assets/media/Avatar.png" alt="Candice Wu">
+      <p>Candice Wu</p>
+      <p>Maatschappelijk Werker, OCMW Geel</p>
+    </section>
+
+    <!-- Second features section -->
+    <section class="container d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5 text-center border-bottom">
+      <span class="badge text-bg-primary">Features</span>
+      <h2>Snellere besluitvorming</h2>
+      <p>Met de AI-gestuurde inzichten van Loepos krijgen medewerkers real-time toegang tot uitgebreide rapportages en analyses.</p>
+      <img src="./assets/media/feature-screen-mockup.png" alt="" class="">
+
+      <div class="d-flex justify-content-between align-items-center text-center gap-5">
+        <div class="d-flex flex-column align-items-center gap-2">
+          <i class="bi bi-person-heart feature-icon"></i>
+          <h3>Betere ondersteuning voor cliënten</h3>
+          <p>Onze AI-technologie zorgt ervoor dat cliënten sneller geholpen worden en consistent de zorg krijgen die ze nodig hebben.</p>
+        </div>
+
+        <div class="d-flex flex-column align-items-center gap-2">
+          <i class="bi bi-person-arms-up feature-icon"></i>
+          <h3>Efficiëntie voor sociale organisaties</h3>
+          <p>Verminder fouten en verhoog de productiviteit binnen je team – Loepos zorgt voor consistente en betrouwbare resultaten, dag in dag uit.</p>
+        </div>
+
+        <div class="d-flex flex-column align-items-center gap-2">
+          <i class="bi bi-pie-chart-fill feature-icon"></i>
+          <h3>Meer inzicht met data-analyse</h3>
+          <p>Loepos biedt organisaties realtime inzichten en gedetailleerde rapporten over dossierverwerking en cliëntinteracties.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5 border-bottom">
+      <h2 class="text-center">Veelgestelde vragen (FAQ's)</h2>
+      <p class="text-center">Alles wat je moet weten over het product.</p>
+      
+      <div class="accordion accordion-flush w-75" id="accordionExample">
+
+        <div class="accordion-item">
+          <h4 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Is Loepos geschikt voor kleine en grote organisaties?
+            </button>
+          </h4>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Ja, ons platform is flexibel en schaalbaar, ongeacht de grootte van uw team.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h4 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Kan ik Loepos integreren met bestaande systemen?
+            </button>
+          </h4>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Absoluut! Loepos is compatibel met veelgebruikte systemen en biedt naadloze integratie.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h4 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Hoe zit het met gegevensbeveiliging?
+            </button>
+          </h4>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              We nemen privacy serieus. Loepos voldoet aan de strengste beveiligingsnormen, inclusief GDPR.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column justify-content-center align-items-center gap-3 py-5 px-5 my-5 rounded-3 w-75" id="contact-cta">
+        <div>
+          <img src="./assets/media/Avatar3.png" alt="">
+          <img src="./assets/media/Avatar.png" alt="">
+          <img src="./assets/media/Avatar2.png" alt="">
+        </div>
+
+        <h5>Heb je nog vragen?</h5>
+        <p>Kun je het antwoord dat je zoekt niet vinden? Praat dan met ons vriendelijke team.</p>
+        <button type="button" class="btn btn-primary">Neem contact op</button>
+      </div>
+    </section>
+
+    <section class="container d-flex flex-column gap-3 my-5 py-5">
+      <span class="badge text-bg-primary">Features</span>
+      <h2>Efficiënte schuldbemiddeling binnen handbereik</h2>
+      <p>We hebben al het zware werk gedaan, zodat jij dat niet hoeft te doen. Loepos biedt sociale diensten een AI-gestuurd platform dat postverwerking en dossierbeheer transformeert in een moeiteloze en foutloze ervaring. Van onboarding tot dagelijkse operaties – wij zorgen ervoor dat je efficiënter kunt werken en cliënten beter kunt ondersteunen.</p>
+
+      <div class="d-flex justify-content-between">
+        <div class="d-flex flex-column justify-content-center gap-4">
+
+          <div class="d-flex flex-column gap-2 w-75">
+            <span class="third-feature-stat">50%</span>
+            <h4>minder administratieve lasten</h4>
+            <p>Loepos automatiseert repetitieve taken zoals postverwerking en dossierbeheer, zodat medewerkers zich kunnen richten op persoonlijke begeleiding.</p>
+          </div>
+  
+          <div class="d-flex flex-column gap-2 w-75">
+            <span class="third-feature-stat">600%</span>
+            <h4>tijdsbesparingen</h4>
+            <p>Gemiddeld besparen onze klanten tot 600% aan verwerkingstijd dankzij onze innovatieve AI-technologie.</p>
+          </div>
+
+          <div class="d-flex flex-column gap-2 w-75">
+            <span class="third-feature-stat">20%</span>
+            <h4>snellere dossierafhandeling</h4>
+            <p>Dankzij onze slimme automatisering worden dossiers sneller verwerkt, wat resulteert in kortere wachttijden en hogere tevredenheid bij cliënten.</p>
+          </div>
+        </div>
+
+        <img src="./assets/media/features-3.jpg" alt="" class="col-6">
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="container-fluid d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5" id="newsletter-section">
+      <div id="mc_embed_shell">
+        <div id="mc_embed_signup">
+          <form action="https://kevinmalekera.us14.list-manage.com/subscribe/post?u=2c83d58b7e12394b65cbdef9e&amp;id=bf2a03e4db&amp;f_id=006491e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+            <div class="d-flex flex-column gap-3" id="mc_embed_signup_scroll">
+              <h2>Schrijf je vandaag in op onze nieuwsbrief!</h2>
+              <p>Ontvang de laatste nieuws over Loepos en onze innovatieve AI-technologie.</p>
+              <div class="mc-field-group">
+                <input type="email" name="EMAIL" class="required email form-control form-control-lg" id="mce-EMAIL" required="" value="" placeholder="name@example.com">
+              </div>
+              <div id="mce-responses" class="clear foot">
+                <div class="response" id="mce-error-response" style="display: none;"></div>
+                <div class="response" id="mce-success-response" style="display: none;"></div>
+              </div>
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                <input type="text" name="b_2c83d58b7e12394b65cbdef9e_bf2a03e4db" tabindex="-1" value="">
+              </div>
+              <div class="optionalParent">
+                <div class="clear foot">
+                  <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary" value="Subscribe">
+                  <!-- <p style="margin: 0px auto;"><a href="http://eepurl.com/i01a_c" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p> -->
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>        
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container">
+    <div class="d-flex justify-content-between my-4 pt-2">
+      <div>
+        <h6>Product</h6>
+        <ul>
+          <li><a href="">Overzicht</a></li>
+          <li><a href="">Features</a></li>
+          <li><a href="">Oplossing</a></li>
+          <li><a href="">Tutorials</a></li>
+          <li><a href="">Prijzen</a></li>
+          <li><a href="">Releases</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h6>Company</h6>
+        <ul>
+          <li><a href="">Over ons</a></li>
+          <li><a href="">Careers</a></li>
+          <li><a href="">Pers</a></li>
+          <li><a href="">Nieuws</a></li>
+          <li><a href="">Media kit</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h6>Resources</h6>
+        <ul>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Newsletter</a></li>
+          <li><a href="">Events</a></li>
+          <li><a href="">Help centre</a></li>
+          <li><a href="">Tutorials</a></li>
+          <li><a href="">Support</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h6>Use cases</h6>
+        <ul>
+          <li><a href="">Startups</a></li>
+          <li><a href="">Enterprise</a></li>
+          <li><a href="">Government</a></li>
+          <li><a href="">SaaS</a></li>
+          <li><a href="">Marketplace</a></li>
+          <li><a href="">Ecommerce</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h6>Social</h6>
+        <ul>
+          <li><a href="">Twitter</a></li>
+          <li><a href="">LinkedIn</a></li>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Github</a></li>
+          <li><a href="">AngelList</a></li>
+          <li><a href="">Dribbble</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h6>Legal</h6>
+        <ul>
+          <li><a href="">Voorwaarden</a></li>
+          <li><a href="">Privacy</a></li>
+          <li><a href="">Cookies</a></li>
+          <li><a href="">Licenties</a></li>
+          <li><a href="">Instellingen</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center py-4 border-top">
+      <a class="footer-brand" href="#">
+        <img src="./assets/media/logo-loepos-1.png" alt="Loepos logo">
+      </a>
+      <p>&copy; 2025 Loepos. All rights reserved</p>
+    </div>
+  </footer>
+  <script type="module" src="./assets/js/main.js"></script>
 </body>
 </html>

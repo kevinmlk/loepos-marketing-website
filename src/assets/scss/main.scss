@@ -38,50 +38,14 @@ body {
     font-weight: 600;
     color: $--dark-blue;
   }
+ 
 
   p {
     font-size: 1.1em;
     color: $--dark-gray;
   }
 
-  #navbarNav{
-    justify-content:end;
-    text-align: end;
-  }
-
- @media only screen and (max-width: 600px) {
-    h1 {
-      font-size: 2.5em;
-    }
-
-    h2 {
-      font-size: 2em;
-    }
-
-    h3 {
-      font-size: 1.2em;
-    }
-
-    p {
-      font-size: 1em;
-    }
-
-    .d-flex {
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-    } 
- }
-
- @media screen and (max-width: 1050px) {
-  .dFlex {
-    display: flex;
-    flex-wrap: wrap;
-  } 
-}
-
+ 
   footer {
     ul {
       margin-top: 16px;
@@ -177,3 +141,64 @@ body {
     color: $--moderate-blue;
   }
 }
+
+ /* ADDED */
+ #navbarNav{
+  justify-content:end;
+  text-align: end;
+}
+.smallTitle{
+  font-size: .8em;
+  font-weight: 700;
+  color: $--strong-blue;
+}
+
+.icons{
+  font-size: 1em;
+  color: $--dark-blue;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  } 
+}
+
+@media screen and (min-width: 800px) {
+  .cards {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .card{ 
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1050px) {
+.dFlex {
+  display: flex;
+  flex-wrap: wrap;
+} 
+}
+/* --- */

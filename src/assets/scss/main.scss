@@ -15,6 +15,10 @@ body {
     text-align: center;
    }
   }
+
+  .nav-link:hover{
+    color: $--strong-blue;
+  }
   h1 {
     font-size: 3em;
     font-weight: 600;
@@ -40,6 +44,11 @@ body {
     color: $--dark-gray;
   }
 
+  #navbarNav{
+    justify-content:end;
+    text-align: end;
+  }
+
  @media only screen and (max-width: 600px) {
     h1 {
       font-size: 2.5em;
@@ -59,11 +68,19 @@ body {
 
     .d-flex {
       flex-direction: column;
+      flex-wrap: wrap;
       justify-content: center;
       text-align: center;
       align-items: center;
     } 
  }
+
+ @media screen and (max-width: 1050px) {
+  .dFlex {
+    display: flex;
+    flex-wrap: wrap;
+  } 
+}
 
   footer {
     ul {

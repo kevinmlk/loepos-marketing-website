@@ -47,13 +47,62 @@
 
 <!-- Main content -->
 <main>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <h1 class="display-4">Contact</h1>
-                <p class="lead">Heb je vragen of wil je meer informatie? Neem dan contact met ons op.</p>
+    <!-- Contact -->
+    <section class="container d-flex flex-column gap-3 my-5 py-5">
+        <h2>Neem contact op!</h2>
+        <p>Je kan ons altijd bereiken via <span class="colorEmail">info@loepos.com</span></p>
+    </section>
+
+    <!-- Contact form -->
+    <section class="container d-flex flex-column gap-3 contact-form-section">
+        <img src="./assets/media/markus-winkler-unsplash.jpg" alt="contact us" class="col-6 rounded-3" max-height="300px">
+        <form class="form">
+            <div class="mb-3 leftAlign">
+                <label for="name" class="form-label">Naam</label>
+                <input type="text" class="form-control" id="name" required>
             </div>
-        </div>
+            <div class="mb-3 leftAlign">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3 leftAlign">
+                <label for="message" class="form-label">Bericht</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Verstuur bericht</button>
+        </form>
+    </section>
+
+     <!-- Newsletter -->
+     <section class="container-fluid d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5" id="newsletter-section">
+        <div id="mc_embed_shell">
+            <div id="mc_embed_signup">
+            <form action="https://kevinmalekera.us14.list-manage.com/subscribe/post?u=2c83d58b7e12394b65cbdef9e&amp;id=bf2a03e4db&amp;f_id=006491e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+              <div class="d-flex flex-column gap-3" id="mc_embed_signup_scroll">
+                <h2>Schrijf je vandaag in op onze nieuwsbrief!</h2>
+                <p>Ontvang de laatste nieuws over Loepos en onze innovatieve AI-technologie.</p>
+                <div class="mc-field-group">
+                  <input type="email" name="EMAIL" class="required email form-control form-control-lg" id="mce-EMAIL" required="" value="" placeholder="name@example.com">
+                </div>
+                <div id="mce-responses" class="clear foot">
+                  <div class="response" id="mce-error-response" style="display: none;"></div>
+                  <div class="response" id="mce-success-response" style="display: none;"></div>
+                </div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                  <input type="text" name="b_2c83d58b7e12394b65cbdef9e_bf2a03e4db" tabindex="-1" value="">
+                </div>
+                <div class="optionalParent">
+                  <div class="clear foot">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary" value="Subscribe">
+                    <!-- <p style="margin: 0px auto;"><a href="http://eepurl.com/i01a_c" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p> -->
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>        
+    </section>
 </main>
 
 <!-- Footer -->

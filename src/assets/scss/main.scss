@@ -9,6 +9,12 @@ body {
   font-family: Inter, sans-serif;
   background-color: $--white;
   
+  header {
+   ul{
+    justify-content: center;
+    text-align: center;
+   }
+  }
   h1 {
     font-size: 3em;
     font-weight: 600;
@@ -33,6 +39,30 @@ body {
     font-size: 1.1em;
     color: $--dark-gray;
   }
+
+ @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 2.5em;
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    .d-flex {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    } 
+ }
 
   footer {
     ul {

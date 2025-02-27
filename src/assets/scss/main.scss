@@ -9,6 +9,16 @@ body {
   font-family: Inter, sans-serif;
   background-color: $--white;
   
+  header {
+   ul{
+    justify-content: center;
+    text-align: center;
+   }
+  }
+
+  .nav-link:hover{
+    color: $--strong-blue;
+  }
   h1 {
     font-size: 3em;
     font-weight: 600;
@@ -26,14 +36,16 @@ body {
   h6 {
     font-size: .9em;
     font-weight: 600;
-    color: $--dark-blue;
+    color: $--dark-blue; /* ADDED */
   }
+ 
 
   p {
     font-size: 1.1em;
     color: $--dark-gray;
   }
 
+ 
   footer {
     ul {
       margin-top: 16px;
@@ -73,6 +85,13 @@ body {
     img {
       width: 100px;
     }
+  }
+
+  .buttonsCI{
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+
   }
 
   .footer-brand {
@@ -126,3 +145,86 @@ body {
     color: $--moderate-blue;
   }
 }
+
+ /* ADDED */
+ #navbarNav{
+  justify-content:end;
+  text-align: end;
+}
+.smallTitle{
+  font-size: .8em;
+  font-weight: 700;
+  color: $--strong-blue;
+}
+
+.icons{
+  font-size: 1em;
+  color: $--dark-blue;
+}
+
+.colorEmail{
+  color: $--strong-blue;
+  font-weight: 600;
+}
+
+.leftAlign{
+  text-align: left;
+}
+
+.leftAligned{
+  text-align: left;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  } 
+}
+
+@media screen and (min-width: 800px) {
+  .cards {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .card{ 
+    height: 500px;
+  }
+  
+  .contact-form-section.form{
+    width: 200px;
+  }
+  .contact-form-section.flex-column{
+    flex-direction: row !important;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+.dFlex {
+  display: flex;
+  flex-wrap: wrap;
+} 
+}
+/* --- */

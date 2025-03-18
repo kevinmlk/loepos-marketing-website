@@ -143,12 +143,16 @@ body {
 }
 
  /* ADDED */
+ main{
+  margin: 20px;
+ }
+
  #navbarNav{
   justify-content:end;
   text-align: end;
 }
 .smallTitle{
-  font-size: .8em;
+  font-size: 1.2em;
   font-weight: 700;
   color: $--strong-blue;
 }
@@ -199,6 +203,14 @@ body {
 }
 
 @media screen and (min-width: 800px) {
+
+  
+ main{
+  margin: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+ }
+
   .cards {
     max-width: 350px;
     display: flex;

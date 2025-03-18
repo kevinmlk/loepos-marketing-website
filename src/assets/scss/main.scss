@@ -151,6 +151,17 @@ body {
   transform: scale(1.5);
  }
 
+ .sizeContact{
+  width: 400px;
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 10px;
+
+ }
+
  #navbarNav{
   justify-content:end;
   text-align: end;
@@ -231,6 +242,18 @@ body {
   .contact-form-section.flex-column{
     flex-direction: row !important;
   }
+
+  /* ---SIZE CONTACT */
+
+  .sizeForm{
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+  }
+  /* --- */
 }
 
 @media screen and (max-width: 1050px) {
@@ -238,5 +261,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 } 
+
 }
 /* --- */

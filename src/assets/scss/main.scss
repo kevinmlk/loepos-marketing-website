@@ -147,12 +147,31 @@ body {
 }
 
  /* ADDED */
+ main{
+  margin: 20px;
+ }
+
+.sizeLogo{
+  transform: scale(1.5);
+ }
+
+ .sizeContact{
+  width: 400px;
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 10px;
+
+ }
+
  #navbarNav{
   justify-content:end;
   text-align: end;
 }
 .smallTitle{
-  font-size: .8em;
+  font-size: 1.2em;
   font-weight: 700;
   color: $--strong-blue;
 }
@@ -203,6 +222,14 @@ body {
 }
 
 @media screen and (min-width: 800px) {
+
+  
+ main{
+  margin: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+ }
+
   .cards {
     max-width: 350px;
     display: flex;
@@ -219,6 +246,18 @@ body {
   .contact-form-section.flex-column{
     flex-direction: row !important;
   }
+
+  /* ---SIZE CONTACT */
+
+  .sizeForm{
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+  }
+  /* --- */
 }
 
 @media screen and (max-width: 1050px) {
@@ -226,5 +265,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 } 
+
 }
 /* --- */

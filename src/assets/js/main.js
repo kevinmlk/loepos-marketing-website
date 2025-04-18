@@ -3,3 +3,5 @@ import './../scss/main.scss';
 
 // Import bootstrap
 import { Collapse } from 'bootstrap';
+
+// main.js

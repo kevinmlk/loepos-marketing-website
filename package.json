@@ -13,6 +13,7 @@
     "vite": "^6.0.5"
   },
   "dependencies": {
+    "@growthbook/growthbook": "^1.4.1",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.5",
     "bootstrap-icons": "^1.11.3"

@@ -8,7 +8,7 @@
 body {
   font-family: Inter, sans-serif;
   background-color: $--white;
-  
+
   header {
    ul{
     justify-content: center;
@@ -19,6 +19,11 @@ body {
   .nav-link:hover{
     color: $--strong-blue;
   }
+
+  .nav-link.active {
+    color: $--strong-blue !important;
+  }
+
   h1 {
     font-size: 3em;
     font-weight: 600;
@@ -38,14 +43,23 @@ body {
     font-weight: 600;
     color: $--dark-blue; /* ADDED */
   }
- 
+
 
   p {
     font-size: 1.1em;
     color: $--dark-gray;
   }
 
- 
+  .feature {
+    max-width: 400px;
+
+    i {
+      width: fit-content;
+    }
+  }
+
+
+
   footer {
     ul {
       margin-top: 16px;
@@ -76,7 +90,7 @@ body {
   }
 
   #testimonial-text {
-    font-size: 2.6em;
+    font-size: 1.8em;
     font-weight: 500;
   }
 
@@ -218,12 +232,12 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
-  } 
+  }
 }
 
 @media screen and (min-width: 800px) {
 
-  
+
  main{
   margin: 20px;
   margin-left: 60px;
@@ -236,10 +250,10 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .card{ 
+  .card{
     height: 500px;
   }
-  
+
   .contact-form-section.form{
     width: 200px;
   }
@@ -264,7 +278,7 @@ body {
 .dFlex {
   display: flex;
   flex-wrap: wrap;
-} 
+}
 
 }
 /* --- */

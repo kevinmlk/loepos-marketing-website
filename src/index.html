@@ -54,9 +54,24 @@
   <meta property="twitter:title" content="Loepos - AI-gestuurde Schuldbemiddeling & Cliëntbeheer" />
   <meta property="twitter:description" content="Ontdek hoe Loepos schuldbemiddeling digitaliseert met AI. Vereenvoudig processen en verbeter efficiëntie in uw sociale dienst." />
   <meta property="twitter:image" content="https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/485949992_122114140922795841_7234210118737664838_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=Le8JSf5b1iwQ7kNvgErpEoW&_nc_oc=AdnudyheAm2Ag97NengvDdsG8vkN_GlW98CnTbUTpCLvcNG4nFuvj51UPnQS3e80mMv-_VbBTRFFOkL7EsLo5Ifb&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=XPTYqDsdNywtQEtiyqMXHA&oh=00_AYGhBqWutBa55-ZqhjdTIsvOHmbLrBxYInIFglHS95I-zA&oe=67E1F267" />
-
   
-
+  <!-- Growthbook experiment script -->
+  <script>
+    window.growthbook_config = window.growthbook_config || {};
+    window.growthbook_config.trackingCallback = (experiment, result) => {
+      // This is where you would send an event to your analytics provider
+      console.log("Viewed Experiment", {
+        experimentId: experiment.key,
+        variationId: result.key
+      });
+    };
+    </script>
+  <!-- Growthbook SDK Script -->
+  <script async
+  data-api-host="https://cdn.growthbook.io"
+  data-client-key="sdk-lm0m6xtIRrBbL4q"
+  src="https://cdn.jsdelivr.net/npm/@growthbook/growthbook/dist/bundles/auto.min.js"
+  ></script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -76,21 +91,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav display-flex gap-4">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="prijzen.html">Prijzen</a>
+              <a class="nav-link" href="./prijzen.html">Prijzen</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="team.html">Team</a>
+              <a class="nav-link" href="./team.html">Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.html">FAQ</a>
+              <a class="nav-link" href="./faq.html">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="./contact.html">Contact</a>
             </li>
           </ul>
           <div class="buttonsCI">
@@ -99,7 +114,7 @@
           </div>
         </div>
       </div>
-     
+
     </nav>
   </header>
 
@@ -138,7 +153,7 @@
     <section class="container d-flex flex-column align-items-center justify-content-center gap-3 mb-5 py-5">
       <span class="smallTitle">Features</span>
       <h2>Waarom kiezen voor Loepos?</h2>
-      
+
       <div class="d-flex justify-content-between align-items-center text-center gap-5">
         <div class="d-flex flex-column align-items-center gap-3">
           <i class="bi bi-filetype-ai feature-icon"></i>
@@ -200,7 +215,7 @@
     <section class="container d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5 border-bottom">
       <h2 class="text-center">Veelgestelde vragen (FAQ's)</h2>
       <p class="text-center">Alles wat je moet weten over het product.</p>
-      
+
       <div class="accordion accordion-flush w-75" id="accordionExample">
 
         <div class="accordion-item">
@@ -269,7 +284,7 @@
             <h4>minder administratieve lasten</h4>
             <p>Loepos automatiseert repetitieve taken zoals postverwerking en dossierbeheer, zodat medewerkers zich kunnen richten op persoonlijke begeleiding.</p>
           </div>
-  
+
           <div class="d-flex flex-column gap-2 w-75">
             <span class="third-feature-stat">600%</span>
             <h4>tijdsbesparingen</h4>
@@ -315,7 +330,7 @@
             </div>
           </form>
         </div>
-      </div>        
+      </div>
     </section>
   </main>
 
@@ -330,7 +345,7 @@
           <li><a href="">Prijzen</a></li>
           </ul>
       </div>
-    
+      
       <div>
           <h6>Resources</h6>
           <ul>
@@ -339,7 +354,7 @@
           <li><a href="">Privacy</a></li>
           </ul>
       </div>
-    
+      
       <div>
           <h6>Social</h6>
           <ul>

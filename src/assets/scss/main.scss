@@ -117,6 +117,10 @@ body {
     background-color: $--moderate-blue;
   }
 
+  .badge {
+    border-radius: 16px !important;
+  }
+
   .badge.text-bg-primary {
     background-color: $--strong-blue !important;
     font-size: 1em;

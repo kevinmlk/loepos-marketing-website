@@ -1,3 +1,6 @@
+// Import fonts
+@import "./fonts.scss";
+
 // Color variables
 $--dark-gray: rgb(112, 112, 112);
 $--moderate-blue: #53A2BE;
@@ -10,5 +13,19 @@ $--error: #DC3545;
 $--white: #FFFFFF;
 $--black: #000000;
 
-// Typography variables
-$--font-family: 'Inter', sans-serif;
+// Font size variables
+$--header-1-font-size: 3em;
+$--header-2-font-size: 2.5em;
+$--body-font-size: 1.5em;
+$--caption-font-size: 1em;
+
+// Font family variables
+$--header-1-font: "Inter 18pt Bold", sans-serif;
+$--header-2-font: "Inter 18pt SemiBold", sans-serif;
+$--body-font: "Inter 18pt Regular", sans-serif;
+$--caption-font: "Inter 18pt Light", sans-serif;
+
+// Line height variables
+$--headers-line-height: 1.2;
+$--body-line-height: 1.5;
+

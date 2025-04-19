@@ -81,10 +81,6 @@ body {
   }
 
   // Id's
-  #testimonial-section, #contact-cta, #newsletter-section {
-    background-color: $--light-gray;
-  }
-
   #partner-logos {
     background-color: $--white;
   }
@@ -161,9 +157,9 @@ body {
 }
 
  /* ADDED */
- main{
-  margin: 20px;
- }
+//  main{
+//   margin: 20px;
+//  }
 
 .sizeLogo{
   transform: scale(1.5);
@@ -239,9 +235,9 @@ body {
 
 
  main{
-  margin: 20px;
-  margin-left: 60px;
-  margin-right: 60px;
+  // margin: 20px;
+  // margin-left: 60px;
+  // margin-right: 60px;
  }
 
   .cards {

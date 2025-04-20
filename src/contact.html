@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <!-- Umami Cloud tracking code -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="13a3a453-e525-4148-99f5-dd7b7ec4afee"></script>
@@ -40,7 +40,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="mb-5">
+  <header>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg py-3 border-bottom">
       <div class="container">
@@ -78,34 +78,39 @@
 
 <!-- Main content -->
 <main>
-    <!-- Contact -->
-    <section class="container d-flex flex-column gap-3 my-5 py-5">
+  <section class="container d-flex justify-content-between align-items-center row p-0">
+    <img src="./assets/media/markus-winkler-unsplash.jpg" alt="contact us" class="rounded-3 col-6">
+    <!-- Contact form -->
+    <div class="col-5 d-flex flex-column gap-4">
+      <div class="d-flex flex-column gap-3">
         <h2>Neem contact op!</h2>
         <p>Je kan ons altijd bereiken via <span class="colorEmail">info@loepos.com</span></p>
-    </section>
+      </div>
 
-    <!-- Contact form -->
-    <section class="container dFlex flex-column gap-3 contact-form-section">
-        <img src="./assets/media/markus-winkler-unsplash.jpg" alt="contact us" class="rounded-3 sizeContact">
-        <form class="form sizeForm">
-            <div class="mb-3 leftAlign">
-                <label for="name" class="form-label">Naam</label>
-                <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3 leftAlign">
-                <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3 leftAlign">
-                <label for="message" class="form-label">Bericht</label>
-                <textarea class="form-control" id="message" rows="3" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Verstuur bericht</button>
-        </form>
-    </section>
+      <form class="d-flex flex-column gap-2">
+        <div class="mb-3 leftAlign">
+          <label for="name" class="form-label">Naam</label>
+          <input type="text" class="form-control" id="name" placeholder="Jouw volledige naam" required>
+        </div>
+        <div class="mb-3 leftAlign">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+        </div>
+        <div class="mb-3 leftAlign">
+          <label for="phone" class="form-label">GSM-nummer</label>
+          <input type="phone" class="form-control" id="phone" placeholder="0462 00 00 00" required>
+        </div>
+        <div class="mb-3 leftAlign">
+          <label for="message" class="form-label">Hoe kunnen we helpen?</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="Vertel ons meer..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Verstuur bericht</button>
+      </form>
+    </div>
+  </section>
 
      <!-- Newsletter -->
-     <section class="container-fluid d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5 bg-light">
+     <section class="container-fluid d-flex flex-column align-items-center justify-content-center gap-3 mb-5 py-5 bg-light">
       <div id="mc_embed_shell">
         <div id="mc_embed_signup">
           <form action="https://loepos.us15.list-manage.com/subscribe/post?u=a46500c9fa1e49b2c2c1819a8&amp;id=3a3e43d5a0&amp;f_id=00cac2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">

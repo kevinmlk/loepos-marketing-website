@@ -14,18 +14,21 @@ $--white: #FFFFFF;
 $--black: #000000;
 
 // Font size variables
-$--header-1-font-size: 3em;
-$--header-2-font-size: 2.5em;
-$--body-font-size: 1.5em;
-$--caption-font-size: 1em;
+$--display-font-size: 3rem;
+$--header-1-font-size: 2rem;
+$--header-2-font-size: 1.5rem;
+$--header-3-font-size: 1.25rem;
+$--header-4-font-size: 1.125rem;
+$--body-large-font-size: 1.125rem;
+$--body-default-font-size: 1rem;
+$--body-small-font-size: .875rem;
+$--caption-font-size: .875rem;
+$--overline-font-size: .75rem;
+$--button-font-size: 1rem;
 
 // Font family variables
-$--header-1-font: "Inter 18pt Bold", sans-serif;
-$--header-2-font: "Inter 18pt SemiBold", sans-serif;
-$--body-font: "Inter 18pt Regular", sans-serif;
-$--caption-font: "Inter 18pt Light", sans-serif;
-
-// Line height variables
-$--headers-line-height: 1.2;
-$--body-line-height: 1.5;
+$--inter-bold: "Inter 18pt Bold", sans-serif;
+$--inter-semibold: "Inter 18pt SemiBold", sans-serif;
+$--inter-medium: "Inter 18pt Medium", sans-serif;
+$--inter-regular: "Inter 18pt Regular", sans-serif;$--caption-font: "Inter 18pt Light", sans-serif;
 

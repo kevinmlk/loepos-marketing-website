@@ -6,10 +6,17 @@
 }
 
 @font-face {
-	font-family: "Inter 18pt Light";
-	font-style: normal;
-	font-weight: 300;
-	src: url("../fonts/inter-18pt/inter-18pt-light.woff2") format("woff2");
+  font-family: "Inter 18pt SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/inter-18pt/inter-18pt-semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter 18p Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/inter-18pt/inter-18pt-medium.woff2") format("woff2");
 }
 
 @font-face {
@@ -17,11 +24,4 @@
 	font-style: normal;
 	font-weight: 400;
 	src: url("../fonts/inter-18pt/inter-18pt.woff2") format("woff2");
-}
-
-@font-face {
-	font-family: "Inter 18pt SemiBold";
-	font-style: normal;
-	font-weight: 600;
-	src: url("../fonts/inter-18pt/inter-18pt-semibold.woff2") format("woff2");
 }

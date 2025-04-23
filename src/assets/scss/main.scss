@@ -5,18 +5,25 @@
 // Import element variables
 @import "./element-variables.scss";
 
-html, body {
+html,
+body {
   font-family: $--inter-regular;
   background-color: $--white;
 
   header {
-   ul{
-    justify-content: center;
-    text-align: center;
-   }
+    ul {
+      justify-content: center;
+      text-align: center;
+      li {
+        a {
+          font-family: $--inter-medium;
+          font-size: $--button-font-size;
+        }
+      }
+    }
   }
 
-  .nav-link:hover{
+  .nav-link:hover {
     color: $--strong-blue;
   }
 
@@ -24,11 +31,13 @@ html, body {
     color: $--strong-blue !important;
   }
 
-  .display-h0, h1 {
+  .display-h0,
+  h1 {
     font-family: $--inter-bold;
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     font-family: $--inter-semibold;
   }
 
@@ -65,8 +74,6 @@ html, body {
       width: fit-content;
     }
   }
-
-
 
   footer {
     ul {
@@ -105,11 +112,10 @@ html, body {
     }
   }
 
-  .buttonsCI{
+  .buttonsCI {
     align-items: center;
     text-align: center;
     gap: 16px;
-
   }
 
   .footer-brand {
@@ -163,16 +169,16 @@ html, body {
   }
 }
 
- /* ADDED */
+/* ADDED */
 //  main{
 //   margin: 20px;
 //  }
 
-.sizeLogo{
+.sizeLogo {
   transform: scale(1.5);
- }
+}
 
- .sizeContact{
+.sizeContact {
   width: 400px;
   height: 400px;
   background-size: contain;
@@ -180,34 +186,33 @@ html, body {
   background-position: center;
 
   padding: 10px;
+}
 
- }
-
- #navbarNav{
-  justify-content:end;
+#navbarNav {
+  justify-content: end;
   text-align: end;
 }
-.smallTitle{
+.smallTitle {
   font-size: 1.2em;
   font-weight: 700;
   color: $--strong-blue;
 }
 
-.icons{
+.icons {
   font-size: 1em;
   color: $--dark-blue;
 }
 
-.colorEmail{
+.colorEmail {
   color: $--strong-blue;
   font-weight: 600;
 }
 
-.leftAlign{
+.leftAlign {
   text-align: left;
 }
 
-.leftAligned{
+.leftAligned {
   text-align: left;
   padding: 20px;
 }
@@ -239,13 +244,11 @@ html, body {
 }
 
 @media screen and (min-width: 800px) {
-
-
-//  main{
-//   // margin: 20px;
-//   // margin-left: 60px;
-//   // margin-right: 60px;
-//  }+
+  //  main{
+  //   // margin: 20px;
+  //   // margin-left: 60px;
+  //   // margin-right: 60px;
+  //  }+
 
   .cards {
     max-width: 350px;
@@ -253,20 +256,20 @@ html, body {
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .card{
+  .card {
     height: 500px;
   }
 
-  .contact-form-section.form{
+  .contact-form-section.form {
     width: 200px;
   }
-  .contact-form-section.flex-column{
+  .contact-form-section.flex-column {
     flex-direction: row !important;
   }
 
   /* ---SIZE CONTACT */
 
-  .sizeForm{
+  .sizeForm {
     width: 400px;
     height: 400px;
     background-size: contain;
@@ -278,10 +281,9 @@ html, body {
 }
 
 @media screen and (max-width: 1050px) {
-.dFlex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
+  .dFlex {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 /* --- */

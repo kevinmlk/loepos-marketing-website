@@ -337,53 +337,30 @@
             </p>
           </div>
 
-          <form class="d-flex flex-column gap-2">
-            <div class="mb-3 leftAlign">
-              <label for="name" class="form-label">Naam</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                placeholder="Jouw volledige naam"
-                required
-              />
-            </div>
-            <div class="mb-3 leftAlign">
-              <label for="email" class="form-label">E-mail</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="you@example.com"
-                required
-              />
-            </div>
-            <div class="mb-3 leftAlign">
-              <label for="phone" class="form-label">GSM-nummer</label>
-              <input
-                type="phone"
-                class="form-control"
-                id="phone"
-                placeholder="0462 00 00 00"
-                required
-              />
-            </div>
-            <div class="mb-3 leftAlign">
-              <label for="message" class="form-label"
-                >Hoe kunnen we helpen?</label
-              >
-              <textarea
-                class="form-control"
-                id="message"
-                rows="5"
-                placeholder="Vertel ons meer..."
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">
-              Verstuur bericht
-            </button>
-          </form>
+          <form
+            class="d-flex flex-column gap-2"
+            action="https://formspree.io/f/myzwyrby"
+            method="POST"
+          >
+          <div class="mb-3 leftAlign">
+            <label for="name" class="form-label">Naam</label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Jouw volledige naam" required />
+          </div>
+          <div class="mb-3 leftAlign">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="you@example.com" required />
+          </div>
+          <div class="mb-3 leftAlign">
+            <label for="phone" class="form-label">GSM-nummer</label>
+            <input type="text" name="phone" class="form-control" id="phone" placeholder="0462 00 00 00" required />
+          </div>
+          <div class="mb-3 leftAlign">
+            <label for="message" class="form-label">Hoe kunnen we helpen?</label>
+            <textarea name="message" class="form-control" id="message" rows="5" placeholder="Vertel ons meer..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Verstuur bericht</button>
+        </form>
+
         </div>
       </section>
 

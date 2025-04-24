@@ -16,6 +16,7 @@ export default defineConfig({
             prices: 'src/prijzen.html',
             faq: 'src/faq.html',
             contact: 'src/contact.html',
+            nieuwsbrief: 'src/nieuwsbrief.html',
         },
         },
     },

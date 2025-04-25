@@ -17,6 +17,8 @@ export default defineConfig({
             faq: 'src/faq.html',
             contact: 'src/contact.html',
             nieuwsbrief: 'src/nieuwsbrief.html',
+            404: 'src/404.html',
+            //privacy: 'src/privacy.html',
         },
         },
     },

@@ -82,28 +82,52 @@
 </head>
 <body>
 
-  <!-- Header (zelfde als op hoofdpagina) -->
-  <header class="mb-5">
-    <nav class="navbar navbar-expand-lg py-3 border-bottom">
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <img src="/assets/media/Logo_LOEPOS_BIG.png" alt="Loepos logo" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav display-flex gap-3 me-4">
-            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="/prijzen.html">Prijzen</a></li>
-            <li class="nav-item"><a class="nav-link" href="/team.html">Team</a></li>
-            <li class="nav-item"><a class="nav-link" href="/faq.html">FAQ</a></li>
-            <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-          </ul>
+     <!-- Header -->
+     <header>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg py-3 border-bottom">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="./assets/media/Logo_LOEPOS_BIG.png" alt="Loepos logo" class="sizeLogo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav display-flex gap-3 me-4">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="prijzen.html">Prijzen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="buttonsCI">
+              <button class="btn btn-light me-2" type="button" onclick="window.location.href='nieuwsbrief.html'">
+                Inschrijven</button>
+              <button class="btn btn-sm btn-primary" type="button" onclick="window.location.href='404.html'">Demo aanvragen</button>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
   <!-- Main content -->
   <main class="error-container">

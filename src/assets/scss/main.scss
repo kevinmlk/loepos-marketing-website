@@ -273,6 +273,13 @@ body {
   .card {
     height: 500px;
   }
+  
+   .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+   }
+
+  
 
   .contact-form-section.form {
     width: 200px;

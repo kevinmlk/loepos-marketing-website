@@ -1,24 +1,67 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
 
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NSFBZFW2');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NSFBZFW2');</script>
   <!-- End Google Tag Manager -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZL66XMMTG"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-1ZL66XMMTG');
+    gtag('config', 'G-1ZL66XMMTG');
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll('.third-feature-stat');
+      const options = {
+        threshold: 0.5
+      };
+
+      const startCount = (entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const value = parseInt(el.textContent);
+          let current = 0;
+          const increment = value / 50; // bepaal hoe snel hij telt
+          const interval = setInterval(() => {
+            current += increment;
+            if (current >= value) {
+              el.textContent = value + '%';
+              clearInterval(interval);
+            } else {
+              el.textContent = Math.round(current) + '%';
+            }
+          }, 20);
+          observer.unobserve(el);
+        }
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(startCount);
+      }, options);
+
+      counters.forEach(counter => {
+        // verwijder het % teken zodat we met cijfers werken
+        counter.textContent = counter.textContent.replace('%', '');
+        observer.observe(counter);
+      });
+    });
+  </script>
+
 
   <!-- Umami Cloud tracking code -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="13a3a453-e525-4148-99f5-dd7b7ec4afee"></script>
@@ -27,12 +70,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Keywords -->
-  <meta name="keywords" content="AI-gestuurde schuldbemiddeling, schuldbemiddelingssoftware, cliëntbeheer sociale diensten, efficiënte schuldhulpverlening, automatisering sociale dienstverlening, postverwerking automatiseren, dossierbeheer software, AI in sociale sector, digitale transformatie schuldhulp, OCMW software oplossingen, AI schuldbemiddeling, schuldbemiddelingssoftware, digitale schuldbemiddeling, cliëntbeheer software, schuldhulp software, software voor OCMW en sociale diensten, geautomatiseerd schuldbeheer, AI in schuldhulpverlening, digitale oplossingen voor schuldbemiddeling, OCMW software oplossingen, AI-oplossingen voor schuldbemiddeling, software voor financiële hulpverlening, sociale dienst automatisering, digitaal cliëntbeheer">
+  <meta name="keywords"
+    content="AI-gestuurde schuldbemiddeling, schuldbemiddelingssoftware, cliëntbeheer sociale diensten, efficiënte schuldhulpverlening, automatisering sociale dienstverlening, postverwerking automatiseren, dossierbeheer software, AI in sociale sector, digitale transformatie schuldhulp, OCMW software oplossingen, AI schuldbemiddeling, schuldbemiddelingssoftware, digitale schuldbemiddeling, cliëntbeheer software, schuldhulp software, software voor OCMW en sociale diensten, geautomatiseerd schuldbeheer, AI in schuldhulpverlening, digitale oplossingen voor schuldbemiddeling, OCMW software oplossingen, AI-oplossingen voor schuldbemiddeling, software voor financiële hulpverlening, sociale dienst automatisering, digitaal cliëntbeheer">
 
   <!-- Description -->
-  <meta name="description" content="Loepos biedt AI-gestuurde schuldbemiddeling en cliëntbeheer software voor sociale diensten. Verbeter efficiëntie en ondersteuning met onze innovatieve tools. Onze software helpt bij het automatiseren van repetitieve taken, het vereenvoudigen van processen en het beter ondersteunen van cliënten.">
+  <meta name="description"
+    content="Loepos biedt AI-gestuurde schuldbemiddeling en cliëntbeheer software voor sociale diensten. Verbeter efficiëntie en ondersteuning met onze innovatieve tools. Onze software helpt bij het automatiseren van repetitieve taken, het vereenvoudigen van processen en het beter ondersteunen van cliënten.">
 
-  <meta name="description" content="Loepos biedt AI-gestuurde software voor schuldbemiddeling en cliëntbeheer. Vereenvoudig uw processen en verbeter de efficiëntie van uw sociale dienst.">
+  <meta name="description"
+    content="Loepos biedt AI-gestuurde software voor schuldbemiddeling en cliëntbeheer. Vereenvoudig uw processen en verbeter de efficiëntie van uw sociale dienst.">
 
   <!-- Author -->
   <meta name="author" content="Loepos">
@@ -45,34 +91,40 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.loepos.be/" />
   <meta property="og:title" content="Loepos - AI-gestuurde Schuldbemiddeling & Cliëntbeheer" />
-  <meta property="og:description" content="Ontdek hoe Loepos schuldbemiddeling digitaliseert met AI. Vereenvoudig processen en verbeter efficiëntie in uw sociale dienst." />
-  <meta property="og:image" content="https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/485949992_122114140922795841_7234210118737664838_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=Le8JSf5b1iwQ7kNvgErpEoW&_nc_oc=AdnudyheAm2Ag97NengvDdsG8vkN_GlW98CnTbUTpCLvcNG4nFuvj51UPnQS3e80mMv-_VbBTRFFOkL7EsLo5Ifb&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=XPTYqDsdNywtQEtiyqMXHA&oh=00_AYGhBqWutBa55-ZqhjdTIsvOHmbLrBxYInIFglHS95I-zA&oe=67E1F267" />
+  <meta property="og:description"
+    content="Ontdek hoe Loepos schuldbemiddeling digitaliseert met AI. Vereenvoudig processen en verbeter efficiëntie in uw sociale dienst." />
+  <meta property="og:image"
+    content="https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/485949992_122114140922795841_7234210118737664838_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=Le8JSf5b1iwQ7kNvgErpEoW&_nc_oc=AdnudyheAm2Ag97NengvDdsG8vkN_GlW98CnTbUTpCLvcNG4nFuvj51UPnQS3e80mMv-_VbBTRFFOkL7EsLo5Ifb&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=XPTYqDsdNywtQEtiyqMXHA&oh=00_AYGhBqWutBa55-ZqhjdTIsvOHmbLrBxYInIFglHS95I-zA&oe=67E1F267" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://www.loepos.be/" />
   <meta property="twitter:title" content="Loepos - AI-gestuurde Schuldbemiddeling & Cliëntbeheer" />
-  <meta property="twitter:description" content="Ontdek hoe Loepos schuldbemiddeling digitaliseert met AI. Vereenvoudig processen en verbeter efficiëntie in uw sociale dienst." />
-  <meta property="twitter:image" content="https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/485949992_122114140922795841_7234210118737664838_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=Le8JSf5b1iwQ7kNvgErpEoW&_nc_oc=AdnudyheAm2Ag97NengvDdsG8vkN_GlW98CnTbUTpCLvcNG4nFuvj51UPnQS3e80mMv-_VbBTRFFOkL7EsLo5Ifb&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=XPTYqDsdNywtQEtiyqMXHA&oh=00_AYGhBqWutBa55-ZqhjdTIsvOHmbLrBxYInIFglHS95I-zA&oe=67E1F267" />
+  <meta property="twitter:description"
+    content="Ontdek hoe Loepos schuldbemiddeling digitaliseert met AI. Vereenvoudig processen en verbeter efficiëntie in uw sociale dienst." />
+  <meta property="twitter:image"
+    content="https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/485949992_122114140922795841_7234210118737664838_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=Le8JSf5b1iwQ7kNvgErpEoW&_nc_oc=AdnudyheAm2Ag97NengvDdsG8vkN_GlW98CnTbUTpCLvcNG4nFuvj51UPnQS3e80mMv-_VbBTRFFOkL7EsLo5Ifb&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=XPTYqDsdNywtQEtiyqMXHA&oh=00_AYGhBqWutBa55-ZqhjdTIsvOHmbLrBxYInIFglHS95I-zA&oe=67E1F267" />
 
-   <!-- Start VWO Async SmartCode -->
+  <!-- Start VWO Async SmartCode -->
   <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
   <script type='text/javascript' id='vwoCode'>
-  window._vwo_code || (function() {
-  var account_id=1074765,
-  version=2.1,
-  settings_tolerance=2000,
-  hide_element='body',
-  hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important;',
-  /* DO NOT EDIT BELOW THIS LINE */
-  f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_settings',cc={};try{var c=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=c&&typeof c==='object'?c:{}}catch(e){}var stT=cc.stT==='session'?w.sessionStorage:w.localStorage;code={nonce:v&&v.nonce,use_existing_jquery:function(){return typeof use_existing_jquery!=='undefined'?use_existing_jquery:undefined},library_tolerance:function(){return typeof library_tolerance!=='undefined'?library_tolerance:undefined},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){if(performance.getEntriesByName('first-contentful-paint')[0]){return''}return typeof cc.hE==='string'?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){if(!f){f=true;var t=d.getElementById('_vis_opt_path_hides');if(t)t.parentNode.removeChild(t);if(e)(new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e}},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript';if(e.src){t.src=e.src}else{t.text=e.text}v&&t.setAttribute('nonce',v.nonce);d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){var n=this.getSettings(),i=d.createElement('script'),r=this;t=t||{};if(n){i.textContent=n;d.getElementsByTagName('head')[0].appendChild(i);if(!w.VWO||VWO.caE){stT.removeItem(cK);r.load(e)}}else{var o=new XMLHttpRequest;o.open('GET',e,true);o.withCredentials=!t.dSC;o.responseType=t.responseType||'text';o.onload=function(){if(t.onloadCb){return t.onloadCb(o,e)}if(o.status===200||o.status===304){_vwo_code.addScript({text:o.responseText})}else{_vwo_code.finish('&e=loading_failure:'+e)}};o.onerror=function(){if(t.onerrorCb){return t.onerrorCb(e)}_vwo_code.finish('&e=loading_failure:'+e)};o.send()}},getSettings:function(){try{var e=stT.getItem(cK);if(!e){return}e=JSON.parse(e);if(Date.now()>e.e){stT.removeItem(cK);return}return e.s}catch(e){return}},init:function(){if(d.URL.indexOf('__vwo_disable__')>-1)return;var e=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish();stT.removeItem(cK)},e);var t;if(this.hide_element()!=='body'){t=d.createElement('style');var n=this.hide_element(),i=n?n+this.hide_element_style():'',r=d.getElementsByTagName('head')[0];t.setAttribute('id','_vis_opt_path_hides');v&&t.setAttribute('nonce',v.nonce);t.setAttribute('type','text/css');if(t.styleSheet)t.styleSheet.cssText=i;else t.appendChild(d.createTextNode(i));r.appendChild(t)}else{t=d.getElementsByTagName('head')[0];var i=d.createElement('div');i.style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;display: block !important;';i.setAttribute('id','_vis_opt_path_hides');i.classList.add('_vis_hide_layer');t.parentNode.insertBefore(i,t.nextSibling)}var o=window._vis_opt_url||d.URL,s='https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(o)+'&vn='+version;if(w.location.search.indexOf('_vwo_xhr')!==-1){this.addScript({src:s})}else{this.load(s+'&x=true')}}};w._vwo_code=code;code.init();})();
+    window._vwo_code || (function () {
+      var account_id = 1074765,
+        version = 2.1,
+        settings_tolerance = 2000,
+        hide_element = 'body',
+        hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important;',
+        /* DO NOT EDIT BELOW THIS LINE */
+        f = false, w = window, d = document, v = d.querySelector('#vwoCode'), cK = '_vwo_' + account_id + '_settings', cc = {}; try { var c = JSON.parse(localStorage.getItem('_vwo_' + account_id + '_config')); cc = c && typeof c === 'object' ? c : {} } catch (e) { } var stT = cc.stT === 'session' ? w.sessionStorage : w.localStorage; code = { nonce: v && v.nonce, use_existing_jquery: function () { return typeof use_existing_jquery !== 'undefined' ? use_existing_jquery : undefined }, library_tolerance: function () { return typeof library_tolerance !== 'undefined' ? library_tolerance : undefined }, settings_tolerance: function () { return cc.sT || settings_tolerance }, hide_element_style: function () { return '{' + (cc.hES || hide_element_style) + '}' }, hide_element: function () { if (performance.getEntriesByName('first-contentful-paint')[0]) { return '' } return typeof cc.hE === 'string' ? cc.hE : hide_element }, getVersion: function () { return version }, finish: function (e) { if (!f) { f = true; var t = d.getElementById('_vis_opt_path_hides'); if (t) t.parentNode.removeChild(t); if (e) (new Image).src = 'https://dev.visualwebsiteoptimizer.com/ee.gif?a=' + account_id + e } }, finished: function () { return f }, addScript: function (e) { var t = d.createElement('script'); t.type = 'text/javascript'; if (e.src) { t.src = e.src } else { t.text = e.text } v && t.setAttribute('nonce', v.nonce); d.getElementsByTagName('head')[0].appendChild(t) }, load: function (e, t) { var n = this.getSettings(), i = d.createElement('script'), r = this; t = t || {}; if (n) { i.textContent = n; d.getElementsByTagName('head')[0].appendChild(i); if (!w.VWO || VWO.caE) { stT.removeItem(cK); r.load(e) } } else { var o = new XMLHttpRequest; o.open('GET', e, true); o.withCredentials = !t.dSC; o.responseType = t.responseType || 'text'; o.onload = function () { if (t.onloadCb) { return t.onloadCb(o, e) } if (o.status === 200 || o.status === 304) { _vwo_code.addScript({ text: o.responseText }) } else { _vwo_code.finish('&e=loading_failure:' + e) } }; o.onerror = function () { if (t.onerrorCb) { return t.onerrorCb(e) } _vwo_code.finish('&e=loading_failure:' + e) }; o.send() } }, getSettings: function () { try { var e = stT.getItem(cK); if (!e) { return } e = JSON.parse(e); if (Date.now() > e.e) { stT.removeItem(cK); return } return e.s } catch (e) { return } }, init: function () { if (d.URL.indexOf('__vwo_disable__') > -1) return; var e = this.settings_tolerance(); w._vwo_settings_timer = setTimeout(function () { _vwo_code.finish(); stT.removeItem(cK) }, e); var t; if (this.hide_element() !== 'body') { t = d.createElement('style'); var n = this.hide_element(), i = n ? n + this.hide_element_style() : '', r = d.getElementsByTagName('head')[0]; t.setAttribute('id', '_vis_opt_path_hides'); v && t.setAttribute('nonce', v.nonce); t.setAttribute('type', 'text/css'); if (t.styleSheet) t.styleSheet.cssText = i; else t.appendChild(d.createTextNode(i)); r.appendChild(t) } else { t = d.getElementsByTagName('head')[0]; var i = d.createElement('div'); i.style.cssText = 'z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;display: block !important;'; i.setAttribute('id', '_vis_opt_path_hides'); i.classList.add('_vis_hide_layer'); t.parentNode.insertBefore(i, t.nextSibling) } var o = window._vis_opt_url || d.URL, s = 'https://dev.visualwebsiteoptimizer.com/j.php?a=' + account_id + '&u=' + encodeURIComponent(o) + '&vn=' + version; if (w.location.search.indexOf('_vwo_xhr') !== -1) { this.addScript({ src: s }) } else { this.load(s + '&x=true') } } }; w._vwo_code = code; code.init();
+    })();
   </script>
   <!-- End VWO Async SmartCode -->
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFBZFW2"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFBZFW2" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- Header -->
@@ -83,7 +135,8 @@
         <a class="navbar-brand" href="index.html">
           <img src="./assets/media/LOGO_WEBP.webp" alt="Loepos logo" class="sizeLogo">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -105,8 +158,10 @@
             </li>
           </ul>
           <div class="buttonsCI">
-            <button class="btn btn-light me-2" type="button" onclick="window.location.href='nieuwsbrief.html'">Inschrijven</button>
-            <button class="btn btn-sm btn-primary" type="button" onclick="window.location.href='404.html'">Demo aanvragen</button>
+            <button class="btn btn-light me-2" type="button"
+              onclick="window.location.href='nieuwsbrief.html'">Inschrijven</button>
+            <button class="btn btn-sm btn-primary" type="button" onclick="window.location.href='404.html'">Demo
+              aanvragen</button>
           </div>
         </div>
       </div>
@@ -114,33 +169,38 @@
     </nav>
   </header>
 
-  
+
   <!-- Main content -->
   <main class="my-5">
+
     <!-- Landing section -->
     <section class="container d-flex flex-column align-items-center justify-content-center gap-4 text-center my-5 py-5">
       <div class="d-flex flex-column align-items-center gap-3">
-        <span class="badge text-bg-primary cursor" onclick="window.location.href='nieuwsbrief.html'">Schrijf je nu in voor onze nieuwsbrief<i class="bi bi-arrow-right ms-2"></i></span>
+        <span class="badge text-bg-primary cursor" onclick="window.location.href='nieuwsbrief.html'">Schrijf je nu in
+          voor onze nieuwsbrief<i class="bi bi-arrow-right ms-2"></i></span>
         <h1 id="display-h0">De AI-gebaseerde revolutie in schuldbemiddeling</h1>
-        <p>Haal meer uit uw sociale dienstverlening met een platform dat taken automatiseert, processen vereenvoudigt en cliënten beter ondersteunt.</p>
+         <h2 style="text-align: center;">Launch op 17 juli</h2>
+        <p>Haal meer uit uw sociale dienstverlening met een platform dat taken automatiseert, processen vereenvoudigt en
+          cliënten beter ondersteunt.</p>
       </div>
 
       <div class="d-flex gap-3 mb-4">
-        <button type="button" id="cta-button" class="btn btn-primary" onclick="window.location.href='404.html'"><i class="bi bi-play-circle me-2"></i>Bekijk demo</button>
-        <button type="button" class="btn btn-light" onclick="window.location.href='nieuwsbrief.html'">Inschrijven</button>
+        <button type="button" id="cta-button" class="btn btn-primary" onclick="window.location.href='404.html'"><i
+            class="bi bi-play-circle me-2"></i>Bekijk demo</button>
+        <button type="button" class="btn btn-light"
+          onclick="window.location.href='nieuwsbrief.html'">Inschrijven</button>
       </div>
 
       <div class="d-flex flex-column gap-5">
-        <img src="./assets/media/macbook-mockup.png" alt="loepos" class="img-fluid position-relative">
+        <img src="./assets/media/macbook-mockup.webp" alt="loepos" class="img-fluid position-relative">
 
         <div class="" id="partner-logos">
           <p>Sluit uw organisatie bij ons aan als partner!</p>
           <div class="d-flex dFlex justify-content-between align-items-center gap-5 mt-5 px-5 pb-4 pt-4">
-            <img src="./assets/media/partner-logo-1.png" alt="partner logo 1">
-            <img src="./assets/media/partner-logo-2.png" alt="partner logo 2">
-            <img src="./assets/media/partner-logo-3.png" alt="partner logo 3">
-            <img src="./assets/media/partner-logo-4.png" alt="partner logo 4">
-            <img src="./assets/media/partner-logo-5.png" alt="partner logo 5">
+            <img src="./assets/media/District Antwerpen officieel logo 2019.jpg" style="width: 200px;" alt="partner logo 1">
+            <img src="./assets/media/geel.png" style="width: 200px;" alt="partner logo 2">
+            <img src="./assets/media/herentalspng.png" style="width: 200px;" alt="partner logo 3">
+         
           </div>
         </div>
       </div>
@@ -173,44 +233,53 @@
     </section>
 
     <!-- Testimonial section -->
-    <section class="container-fluid d-flex flex-column align-items-center justify-content-center my-5 p-5 text-center" id="testimonial-section">
+    <section class="container-fluid d-flex flex-column align-items-center justify-content-center my-5 p-5 text-center"
+      id="testimonial-section">
       <img src="./assets/media/partner-logo-2.png" alt="" class="mb-3">
-      <span id="testimonial-text">Met Loepos kunnen we nu onze cliënten veel sneller en persoonlijker ondersteunen.<br> Dit systeem heeft onze manier van werken volledig veranderd.</span>
+      <span id="testimonial-text">Met Loepos kunnen we nu onze cliënten veel sneller en persoonlijker ondersteunen.<br>
+        Dit systeem heeft onze manier van werken volledig veranderd.</span>
       <img class="my-4" src="./assets/media/Avatar.png" alt="Candice Wu">
       <p>Candice Wu</p>
       <p>Maatschappelijk Werker, OCMW Geel</p>
     </section>
 
     <!-- Second features section -->
-    <section class="container d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5 text-center border-bottom">
+    <section
+      class="container d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5 text-center border-bottom">
       <span class="badge text-bg-primary">Features</span>
       <h2>Snellere besluitvorming</h2>
-      <p>Met de AI-gestuurde inzichten van Loepos krijgen medewerkers real-time toegang tot uitgebreide rapportages en analyses.</p>
-      <img src="./assets/media/feature-screen-mockup.png" alt="" class="img-fluid position-relative">
+      <p>Met de AI-gestuurde inzichten van Loepos krijgen medewerkers real-time toegang tot uitgebreide rapportages en
+        analyses.</p>
+      <img src="./assets/media/featureMockupLoepos.png" style="max-width: 80%; margin: 20px;" alt=""
+        class="img-fluid position-relative">
 
       <div class="d-flex justify-content-between align-items-center text-center gap-5">
         <div class="d-flex flex-column align-items-center gap-2">
           <i class="bi bi-person-heart feature-icon"></i>
           <h3>Betere ondersteuning voor cliënten</h3>
-          <p>Onze AI-technologie zorgt ervoor dat cliënten sneller geholpen worden en consistent de zorg krijgen die ze nodig hebben.</p>
+          <p>Onze AI-technologie zorgt ervoor dat cliënten sneller geholpen worden en consistent de zorg krijgen die ze
+            nodig hebben.</p>
         </div>
 
         <div class="d-flex flex-column align-items-center gap-2">
           <i class="bi bi-person-arms-up feature-icon"></i>
           <h3>Efficiëntie voor sociale organisaties</h3>
-          <p>Verminder fouten en verhoog de productiviteit binnen je team – Loepos zorgt voor consistente en betrouwbare resultaten, dag in dag uit.</p>
+          <p>Verminder fouten en verhoog de productiviteit binnen je team – Loepos zorgt voor consistente en betrouwbare
+            resultaten, dag in dag uit.</p>
         </div>
 
         <div class="d-flex flex-column align-items-center gap-2">
           <i class="bi bi-pie-chart-fill feature-icon"></i>
           <h3>Meer inzicht met data-analyse</h3>
-          <p>Loepos biedt organisaties realtime inzichten en gedetailleerde rapporten over dossierverwerking en cliëntinteracties.</p>
+          <p>Loepos biedt organisaties realtime inzichten en gedetailleerde rapporten over dossierverwerking en
+            cliëntinteracties.</p>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="container d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5 border-bottom">
+    <section
+      class="container d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5 border-bottom">
       <h2 class="text-center">Veelgestelde vragen (FAQ's)</h2>
       <p class="text-center">Alles wat je moet weten over het product.</p>
 
@@ -218,7 +287,8 @@
 
         <div class="accordion-item">
           <h4 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
               Is Loepos geschikt voor kleine en grote organisaties?
             </button>
           </h4>
@@ -231,7 +301,8 @@
 
         <div class="accordion-item">
           <h4 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Kan ik Loepos integreren met bestaande systemen?
             </button>
           </h4>
@@ -244,7 +315,8 @@
 
         <div class="accordion-item">
           <h4 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               Hoe zit het met gegevensbeveiliging?
             </button>
           </h4>
@@ -256,7 +328,8 @@
         </div>
       </div>
 
-      <div class="d-flex flex-column justify-content-center align-items-center gap-3 py-5 px-5 my-5 rounded-3 w-75" id="contact-cta">
+      <div class="d-flex flex-column justify-content-center align-items-center gap-3 py-5 px-5 my-5 rounded-3 w-75"
+        id="contact-cta">
         <div>
           <img src="./assets/media/Avatar3.png" alt="">
           <img src="./assets/media/Avatar.png" alt="">
@@ -265,14 +338,18 @@
 
         <h5>Heb je nog vragen?</h5>
         <p>Kun je het antwoord dat je zoekt niet vinden? Praat dan met ons vriendelijke team.</p>
-        <button type="button" class="btn btn-primary" onclick="window.location.href='contact.html'">Neem contact op</button>
+        <button type="button" class="btn btn-primary" onclick="window.location.href='contact.html'">Neem contact
+          op</button>
       </div>
     </section>
 
     <section class="container d-flex flex-column gap-3 my-5 py-5">
       <span class="smallTitle">Features</span>
       <h2>Efficiënte schuldbemiddeling binnen handbereik</h2>
-      <p>We hebben al het zware werk gedaan, zodat jij dat niet hoeft te doen. Loepos biedt sociale diensten een AI-gestuurd platform dat postverwerking en dossierbeheer transformeert in een moeiteloze en foutloze ervaring. Van onboarding tot dagelijkse operaties – wij zorgen ervoor dat je efficiënter kunt werken en cliënten beter kunt ondersteunen.</p>
+      <p>We hebben al het zware werk gedaan, zodat jij dat niet hoeft te doen. Loepos biedt sociale diensten een
+        AI-gestuurd platform dat postverwerking en dossierbeheer transformeert in een moeiteloze en foutloze ervaring.
+        Van onboarding tot dagelijkse operaties – wij zorgen ervoor dat je efficiënter kunt werken en cliënten beter
+        kunt ondersteunen.</p>
 
       <div class="d-flex center justify-content-between">
         <div class="d-flex flex-column justify-content-center gap-4">
@@ -280,7 +357,8 @@
           <div class="d-flex flex-column gap-2 w-75">
             <span class="third-feature-stat">50%</span>
             <h4>minder administratieve lasten</h4>
-            <p>Loepos automatiseert repetitieve taken zoals postverwerking en dossierbeheer, zodat medewerkers zich kunnen richten op persoonlijke begeleiding.</p>
+            <p>Loepos automatiseert repetitieve taken zoals postverwerking en dossierbeheer, zodat medewerkers zich
+              kunnen richten op persoonlijke begeleiding.</p>
           </div>
 
           <div class="d-flex flex-column gap-2 w-75">
@@ -292,7 +370,8 @@
           <div class="d-flex flex-column gap-2 w-75">
             <span class="third-feature-stat">20%</span>
             <h4>snellere dossierafhandeling</h4>
-            <p>Dankzij onze slimme automatisering worden dossiers sneller verwerkt, wat resulteert in kortere wachttijden en hogere tevredenheid bij cliënten.</p>
+            <p>Dankzij onze slimme automatisering worden dossiers sneller verwerkt, wat resulteert in kortere
+              wachttijden en hogere tevredenheid bij cliënten.</p>
           </div>
         </div>
 
@@ -301,27 +380,34 @@
     </section>
 
     <!-- Newsletter -->
-    <section class="container-fluid d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5 bg-light">
+    <section
+      class="container-fluid d-flex flex-column align-items-center justify-content-center gap-3 my-5 py-5 bg-light">
       <div id="mc_embed_shell">
         <div id="mc_embed_signup">
-          <form action="https://loepos.us15.list-manage.com/subscribe/post?u=a46500c9fa1e49b2c2c1819a8&amp;id=3a3e43d5a0&amp;f_id=00cac2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+          <form
+            action="https://loepos.us15.list-manage.com/subscribe/post?u=a46500c9fa1e49b2c2c1819a8&amp;id=3a3e43d5a0&amp;f_id=00cac2e1f0"
+            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+            target="_self" novalidate="">
             <div class="d-flex flex-column gap-3" id="mc_embed_signup_scroll">
               <h2>Schrijf je vandaag in op onze nieuwsbrief!</h2>
               <p>Ontvang de laatste nieuws over Loepos en onze innovatieve AI-technologie.</p>
               <div class="mc-field-group">
-                <input type="email" name="EMAIL" class="required email form-control form-control-lg" id="mce-EMAIL" required="" value="" placeholder="name@example.com">
+                <input type="email" name="EMAIL" class="required email form-control form-control-lg" id="mce-EMAIL"
+                  required="" value="" placeholder="Vul hier je e-mailadres in">
               </div>
               <div id="mce-responses" class="clear foot">
                 <div class="response" id="mce-error-response" style="display: none;"></div>
                 <div class="response" id="mce-success-response" style="display: none;"></div>
               </div>
               <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                /* real people should not fill this in and expect good things - do not remove this or risk form bot
+                signups */
                 <input type="text" name="b_a46500c9fa1e49b2c2c1819a8_3a3e43d5a0" tabindex="-1" value="">
               </div>
               <div class="optionalParent">
                 <div class="clear foot">
-                  <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary" value="Inschrijven">
+                  <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary"
+                    value="Inschrijven">
                   <!-- <p style="margin: 0px auto;"><a href="http://eepurl.com/i01a_c" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p> -->
                 </div>
               </div>
@@ -335,48 +421,47 @@
   <!-- Footer -->
   <footer class="container">
     <div class="d-flex justify-content-between my-4 pt-2">
-      <div>
+        <div>
           <h6>Product</h6>
           <ul>
-          <li><a href="">Features</a></li>
-          <li><a href="">Oplossing</a></li>
-          <li><a href="prijzen.html">Prijzen</a></li>
+            <li><a class="nav-link" href="index.html">Features</a></li>
+            <li><a class="nav-link" href="index.html">Oplossing</a></li>
+            <li><a class="nav-link" href="prijzen.html">Prijzen</a></li>
           </ul>
-      </div>
+        </div>
 
-      <div>
+        <div>
           <h6>Resources</h6>
           <ul>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="">Support</a></li>
-          <li><a href="">Privacy</a></li>
+            <li><a class="nav-link" href="faq.html">FAQ</a></li>
+            <li><a class="nav-link" href="contact.html">Support</a></li>
+            <li><a class="nav-link" href="404.html">Privacy</a></li>
           </ul>
-      </div>
+        </div>
 
-      <div>
+        <div>
           <h6>Social</h6>
           <ul>
             <li>
-              <a href="https://www.instagram.com/loepos.be/" target="_blank">Instagram</a>
+              <a class="nav-link" href="https://www.instagram.com/loepos.be/" target="_blank">Instagram</a>
             </li>
             <li>
-              <a href="https://www.facebook.com/profile.php?id=61573875231232" target="_blank">Facebook</a>
+              <a class="nav-link" href="https://www.facebook.com/profile.php?id=61573875231232" target="_blank">Facebook</a>
             </li>
-          <li><a href="">LinkedIn</a></li>
+            <li><a class="nav-link" href="404.html">LinkedIn</a></li>
           </ul>
+        </div>
       </div>
-</div>
-    </div>
-
-    </div>
 
     <div class="d-flex justify-content-between align-items-center py-4 border-top">
-      <a class="footer-brand" href="#">
-        <img src="./assets/media/LOGO_WEBP.webp" alt="Loepos logo">
-      </a>
       <p>&copy; 2025 Loepos. All rights reserved</p>
+      <a class="footer-brand" href="#">
+        <img src="./assets/media/LOGO_WEBP.webp" alt="Loepos logo" />
+      </a>
     </div>
   </footer>
+
   <script type="module" src="./assets/js/main.js"></script>
 </body>
+
 </html>

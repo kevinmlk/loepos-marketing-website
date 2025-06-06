@@ -235,8 +235,12 @@ body {
 
 
 @media only screen and (max-width: 600px) {
+  .sizeLogo {
+    margin-left: 16px;
+  }
+
   h1 {
-    font-size: 2.5em;
+    font-size: 2.3em !important;
   }
 
   h2 {
@@ -258,6 +262,20 @@ body {
     text-align: center;
     align-items: center;
   }
+
+  #testimonial-section {
+    img {
+      width: 80% !important;
+      height: auto;
+    }
+  }
+
+  #get-to-know-us-section {
+    img {
+      width: 60% !important;
+      height: auto;
+    }
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -276,13 +294,13 @@ body {
   .card {
     height: 500px;
   }
-  
+
    .card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
    }
 
-  
+
 
   .contact-form-section.form {
     width: 200px;

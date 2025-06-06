@@ -140,6 +140,14 @@ body {
     background-color: $--moderate-blue;
   }
 
+  .btn-light{
+    background-color: $--dark-blue;
+    color: $--white;
+  }
+  .btn-light:hover{
+    background-color: $--moderate-blue;
+  }
+
   .badge {
     border-radius: 16px !important;
   }
